@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="en" >
+
+<head>
+  <meta charset="UTF-8">
+  <title>Top Drawer Nav Menu</title>
+  
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+
+  <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Lato'>
+
+      <style>
+      /* NOTE: The styles were added inline because Prefixfree needs access to your styles and they must be inlined if they are on local disk! */
+      *, *:before, *:after {
+  box-sizing: border-box;
+}
+
+html {
+  font-family: Lato, Helvetica, Arial, sans-serif;
+  line-height: 1.4;
+}
+
+.container {
+  max-width: 60em;
+  margin: 0 auto;
+}
+
+article {
+  padding: 20px;
+}
+
+.nav, .nav li {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.menu-toggle {
+  position: absolute;
+  z-index: 3;
+  top: 100%;
+  right: 20px;
+  padding: 7px 10px;
+  background: radial-gradient(ellipse farthest-corner at right bottom, #FEDB37 0%, #FDB931 8%, #9f7928 30%, #8A6E2F 40%, transparent 80%), radial-gradient(ellipse farthest-corner at left top, #FFFFFF 0%, #FFFFAC 8%, #D1B464 25%, #5d4a1f 62.5%, #5d4a1f 100%);
+  -moz-box-shadow: 0px -1px 4px -1px black;
+  -webkit-box-shadow: 0px -1px 4px -1px black;
+  box-shadow: 0px 1px 4px 1px black;
+  color: #fff !important;
+  color: #fff;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+.menu-toggle .navicon {
+  display: inline-block;
+  vertical-align: middle;
+  width: 18px;
+  margin-right: 5px;
+}
+.menu-toggle .navicon > hr {
+  width: 100%;
+  height: 2px;
+  margin: 3px 0;
+  background: #fff;
+  border: 0;
+}
+.menu-toggle .navicon > hr:first-child {
+  margin-top: 0;
+}
+
+.menu {
+  position: relative;
+  z-index: 2;
+  width: 100%;
+  background: #000;
+  color: #fff;
+}
+.menu > .container {
+  overflow: hidden;
+  max-height: 60em;
+  transition: all 500ms ease-in-out;
+}
+.menu.min > .container {
+  max-height: 10px;
+}
+.menu .menu-close {
+  position: absolute;
+  z-index: 3;
+  top: 0;
+  right: 0;
+  padding: 10px 20px;
+  color: #777;
+  font-size: 1.5em;
+  line-height: 1;
+  text-decoration: none;
+}
+.menu .menu-close:hover, .menu .menu-close:focus {
+  color: #fff;
+}
+.menu .nav {
+  padding: 20px;
+}
+.menu .nav .nav-heading {
+  margin-bottom: 0.5em;
+  padding-left: 5px;
+  color: #aaa;
+  font-size: 0.75em;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+.menu .nav a {
+  display: block;
+  padding: 5px;
+  border-top: 1px solid #222;
+  text-decoration: none;
+  color: #ddd;
+}
+.menu .nav a:hover, .menu .nav a:focus {
+  background: #222;
+  color: #fff;
+}
+@media (min-width: 44em) {
+  .menu .nav {
+    display: inline-block;
+    vertical-align: top;
+    width: 32%;
+  }
+}
+
+.embed-container {
+  position: relative;
+  padding-bottom: 56.25%;
+  height: 0;
+  overflow: hidden;
+  max-width: 100%;
+}
+
+.embed-container iframe, .embed-container object, .embed-container embed {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.btn {
+  display: inline-block;
+  color: black;
+  min-width: 154px;
+  text-decoration: none;
+  margin-right: 50px;
+  padding: 20px;
+  position: relative;
+  text-align: center;
+}
+.btn:hover .button-stroke:nth-child(2) {
+  stroke-dashoffset: 0;
+}
+
+.button-stroke {
+  display: block;
+  width: calc(100% - 40px);
+  height: 20px;
+  stroke: yellow;
+  position: absolute;
+  left: 20px;
+  bottom: -10px;
+  stroke-width: 4;
+}
+.button-stroke:nth-child(2) {
+  stroke-dasharray: 650px;
+  stroke-dashoffset: 650px;
+  stroke: #11171a;
+  stroke-width: 5;
+  transition: stroke-dashoffset 800ms ease-out;
+}
+
+    </style>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prefixfree/1.0.7/prefixfree.min.js"></script>
+
+</head>
+
+<body>
+
+  
+<nav class="menu min">
+
+	<div class="container">
+
+		<a href="#0" class="menu-close">&times;</a>
+
+		<ul class="nav">
+			<li class="nav-heading">Sustainably Sourced Seafood</li>
+			<li><a href="https://www.ceibatrade.com/octapus">Octopus</a></li>
+			<li><a href="https://www.ceibatrade.com/tuna">Thannus Tuna</a></li>
+			<li><a href="https://www.ceibatrade.com/shrimp">Shrimp</a></li>
+			<li><a href="https://www.ceibatrade.com/arapaima-gigas">Arapaima Gigas</a></li>
+      <li><a href="https://www.ceibatrade.com/seafood">>>View All Seafood (6 Products)</a></li>
+		</ul>
+
+		<ul class="nav">
+			<li class="nav-heading">Organic Produce </li>
+			<li><a href="https://www.ceibatrade.com/avocado">Avocado</a></li>
+			<li><a href="https://www.ceibatrade.com/bananas">Bananas</a></li>
+			<li><a href="https://www.ceibatrade.com/mango">Mango</a></li>
+			<li><a href="https://www.ceibatrade.com/yuca">Yuca</a></li>
+			<li><a href="https://www.ceibatrade.com/coffee">Coffee</a></li>
+			<li><a href="https://www.ceibatrade.com/produce">>>View All Produce (22 Products)</a></li>
+		</ul>
+
+		<ul class="nav">
+			<li class="nav-heading">Ceiba International Group</li>
+			<li><a href="https://ceibatrade.blogspot.com">Visit Catablog</a></li>
+			<li><a href="#0">About Ceiba Trade</a></li>
+			<li><a href="https://facebook.com/ceibaig">Follow on Facebook</a></li>
+      <li><a href="#0">Contact Us</a></li>
+		</ul>
+<iframe src="https://www.facebook.com/plugins/like.php?href=https%3A%2F%2Ffacebook.com%2Fceibaig&width=450&layout=standard&action=recommend&size=small&show_faces=false&share=true&height=35&appId=811217115560364" width="450" height="35" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true" allow="encrypted-media"></iframe>
+	</div>
+
+	<a href="#menu" class="menu-toggle">
+		<div class="navicon">
+			<hr>
+			<hr>
+			<hr>
+		</div>
+		Menu
+	</a>
+
+</nav>
+
+
+<main>
+	<div class="container">
+
+		<article>
+<p><a href="https://www.ceibatrade.com/produce" target="_blank" rel="noopener"><img src="https://www.ceibatrade.com/assets/public/images/smceiba.png?width=150" width="150" class="align-center" /></a></p>
+			<h1>About the Ceiba International Group Journey</h1>
+			<p>We are dedicated to delivering quality products at a fair price to our clients around the world. We are pleased to offer a wide range of products. If you are looking for 100% organic fruits and vegatables, farm raised seafood, or sustainably sourced materials, give us a call and find out how we can help you!</p>
+			<p>Sustainable Sourcing is the integration of social, ethical and environmental performance factors into the process of selecting suppliers. One of the ultimate goals of Ceiba International Group is to build strong, long-term relationships with our suppliers.</p>
+<iframe src="https://www.facebook.com/plugins/like.php?href=https%3A%2F%2Ffacebook.com%2Fceibaig&width=450&layout=standard&action=recommend&size=small&show_faces=false&share=true&height=35&appId=811217115560364" width="450" height="35" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true" allow="encrypted-media"></iframe>
+			<h2>Importers /Exporters of Fine Sustainable Products</h2>
+			<p>Sustainable products are products that provide many environmental, social and economic benefits.Sustainability is protecting the public’s health and the environment while extracting raw materials</p>
+			<p>At Ceiba International Group we care about our environmental impact and the local markets from which we receive our products. We believe in reinvestment in these communities. Giving back by providing storage facilities to farmers so that their products aren’t lost to spoilage and constructing irrigation systems. Working with local provincial governments to help implement and improved agricultural practices. Helping to create a sustainable commercial market for the local communities and ensures the highest quality products for our customers.</p>
+<!-- Place this tag where you want the widget to render. -->
+<center><div class="g-person" data-width="450" data-href="//plus.google.com/u/0/116075535466311410947" data-rel="author"></div></center>
+
+<!-- Place this tag after the last widget tag. -->
+<script type="text/javascript">
+  (function() {
+    var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;
+    po.src = 'https://apis.google.com/js/platform.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
+  })();
+</script>
+			<h3>Driven to connect communities with 100% organic and sustainable sourced products from across the globe.</h3>
+			<p><iframe width="100%" height="415" src="https://www.youtube.com/embed/RHmUY7SXXsk?rel=0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe><script src="https://apis.google.com/js/platform.js"></script>
+
+<div class="g-ytsubscribe" data-channelid="UCK95ECE_kupjkLGW3Rn-osw" data-layout="full" data-theme="dark" data-count="hidden"></div></p>
+
+      <h3>Take a look at our catalogues</h3>
+      <div class='embed-container'><iframe src='https://landsurveyorsunited.github.io/ceibatrade/pdfs/demo/index.htm' style='border:0'></iframe></div>
+    
+    <center><svg id="stroke" xmlns="http://www.w3.org/2000/svg" width="0" height="0">
+	<defs>
+		<path id="line" d="M2 2c49.7 2.6 100 3.1 150 1.7-46.5 2-93 4.4-139.2 7.3 45.2-1.5 90.6-1.8 135.8-.6" fill="none" stroke-linecap="round" stroke-linejoin="round" vector-effect="non-scaling-stroke"/>
+	</defs>
+</svg>
+
+<div class="container">
+	<a class="btn" href="https://go.srvyr.com/ceibakit">View Catalogues Full Screen
+		<svg class="button-stroke" viewBox="0 0 154 13">
+			<use href="#line"></use>
+		</svg>
+		<svg class="button-stroke" viewBox="0 0 154 13">
+			<use href="#line"></use>
+		</svg>
+	</a>
+	<a class="btn" href="https://www.ceibatrade.com/seafood">View Seafood
+		<svg class="button-stroke" viewBox="0 0 154 13">
+			<use href="#line"></use>
+		</svg>
+		<svg class="button-stroke" viewBox="0 0 154 13">
+			<use href="#line"></use>
+		</svg>
+	</a>
+	<a class="btn" href="https://www.ceibatrade.com/seafood">View Produce
+		<svg class="button-stroke" viewBox="0 0 154 13">
+			<use href="#line"></use>
+		</svg>
+		<svg class="button-stroke" viewBox="0 0 154 13">
+			<use href="#line"></use>
+		</svg>
+	</a>
+	<a class="btn" href="https://www.ceibatrade.com/contact">Contact Ceiba
+		<svg class="button-stroke" viewBox="0 0 154 13">
+			<use href="#line"></use>
+		</svg>
+		<svg class="button-stroke" viewBox="0 0 154 13">
+			<use href="#line"></use>
+		</svg>
+	</a>
+	</div></center>
+		</article>
+
+	</div>
+</main>
+  <script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+
+  
+
+    <script  src="js/index.js"></script>
+
+
+
+
+</body>
+
+</html>
