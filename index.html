@@ -173,7 +173,49 @@ article {
   stroke-width: 5;
   transition: stroke-dashoffset 800ms ease-out;
 }
+.toggle-box {
+  display: none;
+}
 
+.toggle-box + label {
+  cursor: pointer;
+  display: block;
+  font-weight: bold;
+  line-height: 31px;
+  margin-bottom: 5px;
+  color:green;
+}
+
+.toggle-box + label + div {
+  display: none;
+  margin-bottom: 10px;
+}
+
+.toggle-box:checked + label + div {
+  display: block;
+}
+
+.toggle-box + label:before {
+  background-color: #CC0000;
+  -webkit-border-radius: 20px;
+  -moz-border-radius: 20px;
+  border-radius: 20px;
+  color: #FFFFFF;
+  content: "+";
+  display: block;
+  float: left;
+  font-weight: bold;
+  height: 20px;
+  line-height: 20px;
+  margin-right: 5px;
+  text-align: center;
+  width: 30px;
+}
+
+.toggle-box:checked + label:before {
+  content: "\2212";
+}
+.embed-container { position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; max-width: 100%; } .embed-container iframe, .embed-container object, .embed-container embed { position: absolute; top: 0; left: 0; width: 100%; height: 100%; }
     </style>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/prefixfree/1.0.7/prefixfree.min.js"></script>
@@ -266,7 +308,25 @@ article {
 		<path id="line" d="M2 2c49.7 2.6 100 3.1 150 1.7-46.5 2-93 4.4-139.2 7.3 45.2-1.5 90.6-1.8 135.8-.6" fill="none" stroke-linecap="round" stroke-linejoin="round" vector-effect="non-scaling-stroke"/>
 	</defs>
 </svg>
-
+<input class="toggle-box" id="header1" type="checkbox" >
+<label for="header1">Subscribe to Updates for Produce and/or Seafood</label>
+<div><p>Subscribe to <a href="https://ceibatrade.blogspot.com/search/label/Produce" target="_blank" rel="noopener">Organic Produce Category</a> of <a href="https://ceibatrade.blogspot.com/" target="_blank" rel="noopener">Our Blog </a>and be notified by email when new items are added.</p>
+<form style="border: 1px solid #ccc; padding: 3px; text-align: center;" action="https://feedburner.google.com/fb/a/mailverify" method="post" target="popupwindow" onsubmit="window.open('https://feedburner.google.com/fb/a/mailverify?uri=CeibaTradeProduce', 'popupwindow', 'scrollbars=yes,width=550,height=520');return true">
+<p></p>
+<p>Enter your email address:</p>
+<p><input type="text" style="width: 140px;" name="email" /></p>
+<input type="hidden" value="CeibaTradeProduce" name="uri" /><input type="hidden" name="loc" value="en_US" /><input type="submit" value="Subscribe" />
+<p>Delivered by <a href="https://feedburner.google.com" target="_blank" rel="noopener">FeedBurner</a></p>
+</form>
+<p></p>
+<p>Subscribe to <a href="https://ceibatrade.blogspot.com/search/label/Seafood" target="_blank" rel="noopener">Seafood Category</a> of <a href="https://ceibatrade.blogspot.com/" target="_blank" rel="noopener">Our Blog&nbsp;</a>and be notified by email when new items are added.</p>
+<form style="border: 1px solid #ccc; padding: 3px; text-align: center;" action="https://feedburner.google.com/fb/a/mailverify" method="post" target="popupwindow" onsubmit="window.open('https://feedburner.google.com/fb/a/mailverify?uri=CeibaTradeSustainableSeafood', 'popupwindow', 'scrollbars=yes,width=550,height=520');return true">
+<p>Enter your email address:</p>
+<p><input type="text" style="width: 140px;" name="email" /></p>
+<input type="hidden" value="CeibaTradeSustainableSeafood" name="uri" /><input type="hidden" name="loc" value="en_US" /><input type="submit" value="Subscribe" />
+<p>Delivered by <a href="https://feedburner.google.com" target="_blank" rel="noopener">FeedBurner</a></p>
+</form></div>
+</div>
 <div class="container">
 	<a class="btn" href="https://go.srvyr.com/ceibakit">View Catalogues Full Screen
 		<svg class="button-stroke" viewBox="0 0 154 13">
