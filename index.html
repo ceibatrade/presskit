@@ -233,7 +233,45 @@ article {
   content: "\2212";
 }
 .embed-container { position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; max-width: 100%; } .embed-container iframe, .embed-container object, .embed-container embed { position: absolute; top: 0; left: 0; width: 100%; height: 100%; }
-    </style>
+   #google_translate_element {
+  position: absolute;
+  top: 17px;
+  z-index: 99999;
+  right: 23px;
+}
+
+/*.goog-te-gadget {
+  font-family: 'Open Sans', sans-serif;
+}
+.goog-te-gadget-simple  {
+  background-color: #;
+  border-left: 1px solid #d5d5d5;
+  border-top: 1px solid #9b9b9b;
+  border-bottom: 1px solid #e8e8e8;
+  border-right: 1px solid #d5d5d5;
+  font-size: 10pt;
+  display: inline-block;
+  padding-top: 1px;
+  padding-bottom: 2px;
+  cursor: pointer;
+  zoom: 1;
+}
+.goog-te-menu2 {
+  max-width: 100%;
+}*/
+/*Can't do much apparently - damn iframe*/
+/* ================================== *\
+    Mediaqueries
+\* ================================== */
+@media (max-width: 667px) {
+  #google_translate_element {
+    top: 33px;
+    right: 60px;
+  }
+}
+
+	
+	</style>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/prefixfree/1.0.7/prefixfree.min.js"></script>
 
@@ -287,7 +325,13 @@ article {
 	</a>
 
 </nav>
-
+<div id="google_translate_element"></div>
+<script type="text/javascript">
+function googleTranslateElementInit() {
+  new google.translate.TranslateElement({pageLanguage: 'en', layout: google.translate.TranslateElement.InlineLayout.SIMPLE}, 'google_translate_element');
+}
+</script>
+<script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
 
 <main>
 	<div class="container">
